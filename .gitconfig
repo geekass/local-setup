@@ -1,0 +1,48 @@
+[alias]
+    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short --decorate --color
+    cl = clone
+    ck = checkout
+    s = status
+    a = add
+    c = commit
+    cmm = commit -m 'merge conflicts resolved'
+    f = fetch
+    fo = fetch origin
+    ft = fetch --tags
+    m = merge
+    mfh = merge FETCH_HEAD
+    pl = pull --rebase
+    plo = pull --rebase origin
+    ph = push
+    pho = push origin
+    t = tag
+    b = branch
+    l = log
+    la = log --author='Richard Hewett'
+    sf = diff-tree --no-commit-id --name-status -r
+    st = stash
+    stl = stash list
+    stp = stash pop
+
+[user]
+	name = Richard Hewett
+	email = richard.alastair.hewett@gmail.com
+
+[core]
+    editor = /usr/bin/vim
+	excludesfile = /Users/rhewett/.gitignore
+	autocrlf = input
+
+[merge]
+    tool = opendiff
+
+[mergetool "opendiff"]
+    cmd = "opendiff \"$LOCAL\" \"$REMOTE\" -merge \"$MERGED\""
+
+[color]
+    status = auto
+
+[color "status"]
+    untracked = blue
+    added = green
+    changed = yellow
