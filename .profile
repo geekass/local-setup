@@ -14,5 +14,5 @@ alias d='docker '
 #source /usr/local/bin/virtualenvwrapper.sh
 
 # Source scripts
-source ~/Scripts/sources.sh
+source ~/local-setup/Scripts/sources.sh
 
